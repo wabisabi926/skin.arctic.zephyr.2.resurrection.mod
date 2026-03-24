@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Arctic: Zephyr 2 - Resurrection
-# Addon id: sk在.arctic.zephyr.2.resurrection
+# Addon id: skin.arctic.zephyr.2.resurrection
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -26,7 +26,7 @@ msgctxt "#31001"
 msgid "Controllers"
 msgstr "控件"
 
-#: /1080i/script-sk在shortcuts.xml
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31002"
 msgid "Hub node"
 msgstr "分类中心节点"
@@ -53,25 +53,25 @@ msgstr "合集"
 
 #: /1080i/Custom_1119_EnableInfoLists.xml
 msgctxt "#31007"
-msgid "Use local library 在fo for recommendations"
+msgid "Use local library info for recommendations"
 msgstr "使用本地媒体库信息生成推荐"
 
-#: /1080i/Sk在Sett在gs.xml
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31008"
 msgid "Install weather fanart"
 msgstr "安装天气背景图"
 
-#: /1080i/Sk在Sett在gs.xml
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
 msgstr "用分类中心替换子菜单"
 
-#: /1080i/script-sk在shortcuts.xml
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31010"
 msgid "Widget"
 msgstr "小组件"
 
-#: /1080i/script-sk在shortcuts.xml
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31011"
 msgid "Aspect"
 msgstr "宽高比"
