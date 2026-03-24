@@ -627,7 +627,7 @@ msgstr "60 秒"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31127"
-msgid "10 分钟之前"
+msgid "10 minutes"
 msgstr "10 分钟"
 
 #: /1080i/SkinSettings.xml
