@@ -12,9 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Content-Transfer-Encod在g: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: /1080i/Custom_1134_Custom_Hub.xml
 msgctxt "#31000"
@@ -2266,6 +2265,11 @@ msgstr "奖项"
 msgctxt "#31597"
 msgid "show rating for episodes"
 msgstr "显示剧集评分"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31598"
+msgid "Simple OSD info with poster"
+msgstr "带有海报的简单 OSD 信息"
 
 #: /shortcuts/skinviewtypes.json
 msgctxt "#31611"
