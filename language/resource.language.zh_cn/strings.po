@@ -56,12 +56,12 @@ msgctxt "#31007"
 msgid "Use local library info for recommendations"
 msgstr "使用本地媒体库信息生成推荐"
 
-#: /1080i/script-skinshortcuts.xml
+#: /1080i/SkinSettings.xml
 msgctxt "#31008"
 msgid "Install weather fanart"
 msgstr "安装天气背景图"
 
-#: /1080i/script-skinshortcuts.xml
+#: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
 msgstr "用分类中心替换子菜单"
