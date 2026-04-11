@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1147">
+    <defaultcontrol always="true">6207</defaultcontrol>
+    <onload>CancelAlarm(osd_timeout,true)</onload>
+    <include>Animation_FadeIn_SlideUp</include>
+    <controls>
+        <control type="button" id="99220">
+            <include>Defs_Hidden_Button</include>
+            <onfocus>SetFocus(6207)</onfocus>
+            <onfocus condition="Window.IsVisible(1147)">Action(Close)</onfocus>
+        </control>
+        
+        <control type="button">
+            <description>background close area</description>
+            <left>0</left>
+            <top>0</top>
+            <width>100%</width>
+            <bottom>200</bottom>
+            <texturefocus />
+            <texturenofocus />
+            <onclick>Action(close)</onclick>
+        </control>
+        
+        <control type="group">
+            <right>5</right>
+            <width>955</width>
+            <bottom>5</bottom>
+            <height>635</height>
+            
+            <!-- Subtitle Streams List -->
+            <include content="OSD_Stream_Selector">
+                <param name="id" value="6207" />
+                <param name="buttonid" value="18" />
+                <param name="stream_type" value="subtitle" />
+                <param name="header" value="$LOCALIZE[287]" />
+                <param name="nibpos" value="180" />
+                <param name="width" value="955" />
+                <param name="method" value="set_player_subtitle" />
+                <param name="enabled" value="VideoPlayer.SubtitlesEnabled" />
+                <param name="toggle" value="true" />
+                <param name="icon" value="special://skin/extras/icons/quote.png" />
+            </include>
+        </control>
+    </controls>
+</window>
