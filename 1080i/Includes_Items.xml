@@ -3053,7 +3053,7 @@
         </include>
         <include content="Items_Dialog_RatingType_Template">
             <param name="id">9010</param>
-            <param name="label">豆瓣</param>
+            <param name="label">Douban</param>
             <param name="type">Douban</param>
             <param name="item">$PARAM[item]</param>
             <param name="content">$PARAM[content]</param>
