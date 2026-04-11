@@ -2070,6 +2070,11 @@
                 <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].Letterboxd_Rating)]</param>
                 <param name="visible">[$PARAM[visible]] + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[service].Letterboxd_Rating))</param>
             </include>
+            <include content="Object_Rating_Line_Label" condition="Skin.String(CustomRating.$PARAM[content].$PARAM[item],Douban)">
+                <param name="icon">flags/$PARAM[directory]/ratings/douban.png</param>
+                <param name="label">$INFO[Window(Home).Property(TMDbHelper.$PARAM[service].Douban_Rating)]</param>
+                <param name="visible">[$PARAM[visible]] + !String.IsEmpty(Window(Home).Property(TMDbHelper.$PARAM[service].Douban_Rating))</param>
+            </include>            
         </definition>
     </include>
 
