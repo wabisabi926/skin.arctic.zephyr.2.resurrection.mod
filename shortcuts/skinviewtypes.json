@@ -181,7 +181,7 @@
             "viewtypes": ["500"],
             "library": "500",
             "plugins": "500"
-        }，
+        },
         "addons": {
             "rule": "Container.Content(addons)",
             "viewtypes": ["50", "500", "512", "510", "517", "527"],
