@@ -1,30 +1,36 @@
 # Arctic: Zephyr 2 - Resurrection Mod
-*`Arctic Zephyr 2` skin was originally created by `Jurialmunkey` and then modified by `Pkscout` to work with Kodi 19 Matrix.\
-Then, `Heppen` revived the skin and changed its name to `Arctic Zephyr 2 Resurrection`.\
-I am now trying to keep it alive :)\
-The skin is designed to be simple, allowing users to focus on their media content.*
+*`Arctic Zephyr 2 皮肤最初由 Jurialmunkey 开发，后由 Pkscout 进行适配修改以支持 Kodi 19 Matrix。\
+之后 Heppen 对该皮肤进行了重新维护，并将其更名为 Arctic Zephyr 2 Resurrection。\
+现在由我继续维护更新：)\
+本皮肤主打简洁设计，让用户能够专注于媒体内容本身。*
 
-# Installation & Updates
+# 魔改内容
 
-*Install from repository*
-- Download repository: [repository.dendygh](https://dendygh.github.io/repository.dendygh-1.3.zip)
-- Or install it via Kodi file-manager
-	- add source: https://dendygh.github.io
+- 增加海报墙标题
+- 增加豆瓣评分（需要搭配魔改版 tmdb 助手） https://github.com/wabisabi926/plugin.video.themoviedb.helper/tree/douban
+- 更新中文翻译
+
+# 安装与更新
+
+*从仓库安装*
+- 下载仓库： [repository.dendygh](https://dendygh.github.io/repository.dendygh-1.3.zip)
+- 或通过 Kodi 文件管理器安装
+	- 添加源： https://dendygh.github.io
 
 
-*Manual installation*  
-Skin requires additional dependency, so you will need to install it first.
+*手动安装*  
+该皮肤需要额外依赖项，请先安装依赖：
 - [script.skinhelper](https://github.com/DenDyGH/script.skinhelper/releases/download/v0.0.4/script.skinhelper-0.0.4.zip)
 
-Then install skin
+随后安装对应版本的皮肤：
 - Kodi 22 Piers: [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/latest/download/skin.arctic.zephyr.2.resurrection.mod-Piers.zip)
 
 - Kodi 21 Omega: [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/latest/download/skin.arctic.zephyr.2.resurrection.mod-Omega.zip)
 
-- Kodi 20 Nexus (no longer supported): [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/download/v1.0.24/skin.arctic.zephyr.2.resurrection.mod-Nexus.zip)
+- Kodi 20 Nexus 不再支持): [skin.arctic.zephyr.2.resurrection.mod](https://github.com/DenDyGH/skin.arctic.zephyr.2.resurrection.mod/releases/download/v1.0.24/skin.arctic.zephyr.2.resurrection.mod-Nexus.zip)
 
-# License
+# 许可协议
 
-*This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported License.
-To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
-or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.*
+*本作品采用 知识共享署名 - 非商业性使用 - 相同方式共享 4.0 国际许可协议 进行许可。
+要查看该许可协议副本，请访问 http://creativecommons.org/licenses/by-nc-sa/4.0/
+或致信 Creative Commons，地址：美国加利福尼亚州旧金山市第二大街 171 号 300 室，邮编 94105。
