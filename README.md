@@ -1,7 +1,7 @@
 # Arctic: Zephyr 2 - Resurrection Mod
 *`Arctic Zephyr 2 皮肤最初由 Jurialmunkey 开发，后由 Pkscout 进行适配修改以支持 Kodi 19 Matrix。\
 之后 Heppen 对该皮肤进行了重新维护，并将其更名为 Arctic Zephyr 2 Resurrection。\
-现在由我继续维护更新：)\
+现在由我继续维护更新\
 本皮肤主打简洁设计，让用户能够专注于媒体内容本身。*
 
 # 魔改内容
