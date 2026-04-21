@@ -6,8 +6,9 @@
 
 # 魔改内容
 
-- 增加豆瓣评分（需要搭配魔改版 tmdb 助手） https://github.com/wabisabi926/plugin.video.themoviedb.helper/tree/douban
-- 更新中文翻译
+- 新增：豆瓣评分（需要搭配魔改版 tmdb 助手） https://github.com/wabisabi926/plugin.video.themoviedb.helper/tree/douban
+- 新增：在视频和音乐信息界面添加了光盘封面图像
+- 新增：视图配置等中文翻译
 
 # 安装与更新
 
