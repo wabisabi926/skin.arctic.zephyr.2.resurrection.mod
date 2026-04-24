@@ -9,6 +9,7 @@
 - 新增：豆瓣评分（需要搭配魔改版 tmdb 助手） https://github.com/wabisabi926/plugin.video.themoviedb.helper/tree/douban
 - 新增：一键字幕、一键音轨窗口（需要搭配魔改版 按键映射） https://github.com/wabisabi926/script.keymap
 - 新增：在视频和音乐信息界面添加了光盘封面图像
+- 修复：OSD 剧集排序问题与自动聚焦功能（聚焦到当前播放集）
 - 新增：视图配置等中文翻译
 
 # 安装与更新
