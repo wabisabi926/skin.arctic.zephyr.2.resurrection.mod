@@ -2,7 +2,7 @@
 <window type="dialog" id="1143">
     <defaultcontrol always="true">7000</defaultcontrol>
     <onload>CancelAlarm(osd_timeout,true)</onload>
-    <onload condition="VideoPlayer.Content(episodes) + !Integer.IsEqual(VideoPlayer.PlaylistLength,1) + !Integer.IsEqual(VideoPlayer.PlaylistLength,0)">AlarmClock(osd_playlist_focus,SetFocus(7000,$INFO[VideoPlayer.PlaylistPosition],absolute),00:01,silent)</onload>
+    <onload condition="VideoPlayer.Content(episodes) + Integer.IsGreater(VideoPlayer.PlaylistLength,1) + !String.IsEmpty(Playlist.Position)">AlarmClock(osd_playlist_focus,SetFocus(7000,$INFO[Playlist.Position],absolute),00:00.05,silent)</onload>
     <include>Animation_FadeIn</include>
     <include>Animation_FadeOut</include>
     <controls>
