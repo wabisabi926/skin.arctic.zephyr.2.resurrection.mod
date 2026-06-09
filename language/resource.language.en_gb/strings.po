@@ -2323,3 +2323,8 @@ msgstr ""
 msgctxt "#31623"
 msgid "Showcase Square2"
 msgstr ""
+
+#: /shortcuts/menus.xml
+msgctxt "#31599"
+msgid "Reboot to android"
+msgstr ""

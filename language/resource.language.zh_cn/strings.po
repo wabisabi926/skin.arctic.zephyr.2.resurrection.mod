@@ -2335,3 +2335,8 @@ msgstr "网飞横版"
 msgctxt "#31623"
 msgid "Showcase Square2"
 msgstr "方形展示 2"
+
+#: /shortcuts/menus.xml
+msgctxt "#31599"
+msgid "Reboot to android"
+msgstr "重启到安卓"
