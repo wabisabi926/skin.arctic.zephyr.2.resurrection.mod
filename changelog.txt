@@ -8,254 +8,254 @@
     - 更新 Includes.xml
     - 加载时自动聚焦当前播放的剧集（使用绝对定位）
 0.7.6
-    - Create french translation (thanks @ludovik35)
-    - Add EPG icon in PVR Guide Info (thanks @ludovik35)
-    - fix: black borders in square wall (thanks @codeflorist)
+    - 创建法语翻译（感谢 @ludovik35）
+    - 在 PVR 指南信息中添加 EPG 图标（感谢 @ludovik35）
+    - 修复：方形墙中的黑边问题（感谢 @codeflorist）
 0.7.5
-    - Revert previous changes in Image_Landscape
+    - 回滚 Image_Landscape 中的先前更改
 0.7.4
-    - Fixed icon visibility for pvr
+    - 修复 PVR 图标的可见性问题
 0.7.3
-    - Fixed forced view
-    - Fix for ratings not showing in video osd
-    - Changed default to colorful for rating icons
+    - 修复强制视图问题
+    - 修复视频 OSD 中评分不显示的问题
+    - 将评分图标默认改为彩色
 0.7.2
-    - Added option to disable channel label in pvr guide
+    - 添加在 PVR 指南中禁用频道标签的选项
 0.7.1
-    - Fixed text being truncated
-    - Fixed posters being cut off
+    - 修复文本被截断的问题
+    - 修复海报被剪切的问题
 0.7.0
-    - Merge additional Advanced Emulator Launcher view from skin.arctic.zephyr.2 main
+    - 从 skin.arctic.zephyr.2 主分支合并额外的 Advanced Emulator Launcher 视图
 0.6.9
-    - rollback version to most stable one
+    - 回滚到最稳定版本
 0.6.8
-    - fixed some messing in view types with Flix view
-    - fixed main menu in Flix View
+    - 修复 Flix 视图中的视图类型混乱问题
+    - 修复 Flix 视图中的主菜单
 0.6.7
-    - fixed DialogVideoInfo mess
-    - Hungarian lang updated.
-    - added option to not blur home screen (todo: adding fade to background without blur)
-    - fixed top margin of small busy spinner
-    - fixed top margin in view cast toplabel
-    - increased width of menu panel
-    - changed 2 icons
+    - 修复 DialogVideoInfo 的混乱问题
+    - 更新匈牙利语翻译
+    - 添加不模糊主屏幕的选项（待办：添加无模糊的背景淡入效果）
+    - 修复小型忙碌指示器的顶部边距
+    - 修复视图演员表顶部标签的顶部边距
+    - 增加菜单面板宽度
+    - 更改 2 个图标
 0.6.6
-    - added missing trailer delay
-    - increased trailers delay
-    - tweaks to poster looks in Flix View
+    - 添加缺失的预告片延迟
+    - 增加预告片延迟时间
+    - 调整 Flix 视图中的海报外观
 0.6.5
-    - tweaks to posters looks and behavior
+    - 调整海报的外观和行为
 0.6.4
-    - fixed playing trailers in background in Flix View
-    - fixed height for widgets row in Horizontal layout
-    - tweaks to trailers delay
+    - 修复 Flix 视图中后台播放预告片的问题
+    - 修复水平布局中小部件行的高度
+    - 调整预告片延迟时间
 0.6.3
-    - fixed height for widgets row in Modern layouts
-    - disable language and studio info in Flix View
-    - fix for square wall aspect ratio
-    - move view_cast_toplabel a little bit higher
-    - play trailer only when Home window is visible
-    - fix for possible issue with playing items with special characters
+    - 修复现代布局中小部件行的高度
+    - 在 Flix 视图中禁用语言和工作室信息
+    - 修复方形墙宽高比问题
+    - 将 view_cast_toplabel 向上移动一点
+    - 仅在主窗口可见时播放预告片
+    - 修复播放包含特殊字符项目的可能问题
 0.6.2
-    - added option to set delay to playing trailers in Flix View
-    - added spanish language (thanks to @AudigierSanchez)
-    - increased limit of widgets to slide in Flix View
-    - show clearlogo in home simple layout only when enabled
-    - changed name from "Netflix Style" to "Modern" in home layouts
-    - enabled busy spinner for loading widgets in Flix View
-    - fixed movement through settings up and down
+    - 添加在 Flix 视图中设置预告片播放延迟的选项
+    - 添加西班牙语翻译（感谢 @AudigierSanchez）
+    - 增加 Flix 视图中滑动小部件的限制
+    - 仅在启用时在主页简单布局中显示透明徽标
+    - 将主页布局中的名称从"Netflix Style"更改为"Modern"
+    - 在 Flix 视图中为加载小部件启用忙碌指示器
+    - 修复在设置中上下移动的问题
 0.6.1
-    - option to enable/disable player tempo controls in OSD
-    - fix for percentage rating visibility
-    - added genre to be displayed in Flix View when there is no info about studio
-    - fix for properly displaying posters in widgets
-    - disabled background playing for DialogVideoInfo in Flix View
-    - added option to enable/disable zoom on hover
-    - (as I promised) thanks to @onlytanmoy for his testing!
+    - 添加在 OSD 中启用/禁用播放器速度控制的选项
+    - 修复百分比评分可见性问题
+    - 当没有工作室信息时，在 Flix 视图中添加类型显示
+    - 修复小部件中海报正确显示的问题
+    - 在 Flix 视图中禁用 DialogVideoInfo 的后台播放
+    - 添加启用/禁用悬停缩放的选项
+    - （如我承诺的）感谢 @onlytanmoy 的测试！
 0.6.0
-    - introducing new Flix View layout
-    - updated language strings
+    - 引入新的 Flix 视图布局
+    - 更新语言字符串
 0.5.7
-    - fixed critical bootloop after first install
+    - 修复首次安装后的严重启动循环问题
 0.5.6
-    - reversed option to "display splash screen on startup"
-    - switch from dialog to context menu for home menu style setting
-    - fix for color diffused colorful icons in movies ratings
-    - disabled skin wizard on initial setup to avoid issues
+    - 反转"启动时显示启动画面"选项
+    - 将主页菜单样式设置从对话框切换到上下文菜单
+    - 修复电影评分中彩色图标的颜色扩散问题
+    - 在初始设置时禁用皮肤向导以避免问题
 0.5.5
-    - option to disable skin splash art on startup
-    - added button to select add-on version in DialogAddonInfo
+    - 添加在启动时禁用皮肤启动画面的选项
+    - 在 DialogAddonInfo 中添加选择插件版本的按钮
 0.5.4
-    - changed size of icon when no logo is set for channel in PVR OSD
-    - Use correct clock string (#142), not duration (thanks @epinter)!
+    - 更改 PVR OSD 中频道未设置徽标时的图标大小
+    - 使用正确的时钟字符串 (#142)，而非持续时间（感谢 @epinter）！
 0.5.3
-    - changed visibility of start/end time of current watching Live TV program
-    - added option to disable white/dark background overlay
-    - added fanart button to DialogVideoInfo
-    - fix time being cuts off due to its big font size
-    - fix for program's remaining time overlaps with program description
-    - Hungarian lang updated
+    - 更改当前观看直播电视节目的开始/结束时间可见性
+    - 添加禁用白色/深色背景叠加的选项
+    - 在 DialogVideoInfo 中添加背景图按钮
+    - 修复因字体过大导致时间被截断的问题
+    - 修复节目剩余时间与节目描述重叠的问题
+    - 更新匈牙利语翻译
 0.5.2
-    - added script.embuary.helper to manage dependencies section in skin settings
-    - show episode names in PVR OSD if possible instead show genre and changes to time remaining
-    - fixed wrong place for circle in DialogExtendedProgressBar
-    - fix for gradients in script-skinshortcuts
-    - fix gradient in videosdsettings
-    - added new color picker and settings for colors in Skin Wizard
-    - Removed double icons in wall view (thanks to @notoco)!
+    - 添加 script.embuary.helper 到皮肤设置中的依赖管理部分
+    - 在 PVR OSD 中尽可能显示剧集名称而非类型和剩余时间变化
+    - 修复 DialogExtendedProgressBar 中圆圈位置错误的问题
+    - 修复 script-skinshortcuts 中的渐变问题
+    - 修复 videosdsettings 中的渐变问题
+    - 在皮肤向导中添加新的颜色选择器和颜色设置
+    - 移除墙视图中的重复图标（感谢 @notoco）！
 0.5.1
-    - fixed some critical visual bugs in DialogPVRChannelsOSD
-    - fixed text color in PVR OSD
+    - 修复 DialogPVRChannelsOSD 中的一些严重视觉错误
+    - 修复 PVR OSD 中的文本颜色
 0.5.0
-    - updated some language strings
-    - added option to set gradient colour
-    - introducing new ColorPicker
-    - introducing new Live TV OSD
-    - code cleanup
-    - bump up limit for items in DialogVideoInfo
+    - 更新一些语言字符串
+    - 添加设置渐变颜色的选项
+    - 引入新的 ColorPicker
+    - 引入新的直播电视 OSD
+    - 代码清理
+    - 增加 DialogVideoInfo 中的项目限制
 0.4.9
-    - fix for playing trailers
+    - 修复预告片播放问题
 0.4.8
-    - improvements for DialogVideoInfo
-    - added themoviedb icon
-    - changed small landscape art
-    - improvements for play and browser button in DialogVideoInfo
-    - updated polish language string
-    - updated color flag icons
-    - added option to automatically switch colour theme based on time
+    - DialogVideoInfo 改进
+    - 添加 themoviedb 图标
+    - 更改小型横版艺术图
+    - DialogVideoInfo 中播放和浏览器按钮的改进
+    - 更新波兰语字符串
+    - 更新彩色旗帜图标
+    - 添加根据时间自动切换颜色主题的选项
 0.4.7
-    - added two netflix icons
-    - changed art thumb for tv shows
-    - bring back previous behavior on play button inside DialogVideoInfo
+    - 添加两个 Netflix 图标
+    - 更改电视剧的缩略图
+    - 恢复 DialogVideoInfo 中播放按钮的先前行为
 0.4.6
-    - fix for play button in DialogVideoInfo
+    - 修复 DialogVideoInfo 中的播放按钮
 0.4.5
-    - changes to play button in DialogVideoInfo
-    - some tweaks to resurrection.png
-    - fix for missing artist name in music artists widget
+    - DialogVideoInfo 中播放按钮的更改
+    - resurrection.png 的一些调整
+    - 修复音乐艺术家小部件中缺失艺术家名称的问题
 0.4.4
-    - added option to disable/enable imdb votes count
-    - Add Timeshift to PVR OSD (thanks @FXB78)!
-    - some tweaks to flag icons
-    - added user rating flag in colorful icons
-    - some improvements for skin wizard
-    - updated colorful flags
-    - Fullscreen music window enabler (thanks to @frodo19)!
+    - 添加启用/禁用 IMDB 投票计数的选项
+    - 在 PVR OSD 中添加时光平移功能（感谢 @FXB78）！
+    - 旗帜图标的一些调整
+    - 在彩色图标中添加用户评分标志
+    - 皮肤向导的一些改进
+    - 更新彩色旗帜
+    - 全屏音乐窗口启用器（感谢 @frodo19）！
 0.4.3
-    - fixed custom skin wizard and enabled home layout options
-    - getting rid of script.toolbox in favor of embuary helper
+    - 修复自定义皮肤向导并启用主页布局选项
+    - 弃用 script.toolbox，改用 embuary helper
 0.4.2
-    - some tweaks to resurrection.png
-    - added option to choose between colorful and monochrome icons
-    - added update library button to manage section in DialogVideoInfo
-    - added kodi icon as an option in horizontal menu layout
-    - fix for landscape and small landscape apect ratio
+    - resurrection.png 的一些调整
+    - 添加在彩色和单色图标之间选择的选项
+    - 在 DialogVideoInfo 的管理部分添加更新媒体库按钮
+    - 在水平菜单布局中添加 Kodi 图标作为选项
+    - 修复横版和小型横版的宽高比问题
 0.4.1
-    - make background fanart fullscreen for netflix style view
-    - fix for smartplaylist
-    - reimplementation menu style using script toolbox
-    - added option to set only icons for vertical and netflix style menu layout
+    - 使 Netflix 风格视图的背景背景图全屏显示
+    - 修复智能播放列表问题
+    - 使用 script toolbox 重新实现菜单样式
+    - 添加为垂直和 Netflix 风格菜单布局仅设置图标的选项
 0.4.0
-    - temporary fix to landscape aspect ratio (small landscape still need a fix)
-    - added embuary helper as dependency
-    - introducing new dark netflix style layout
+    - 横版宽高比的临时修复（小型横版仍需修复）
+    - 添加 embuary helper 作为依赖
+    - 引入新的深色 Netflix 风格布局
 0.3.9
-    - introducing new home layout - netflix style
-    - Hungarian language updated
-    - small fix for rt usermeter flag
-    - reenabled youtube videos for tests
+    - 引入新的主页布局 - Netflix 风格
+    - 更新匈牙利语翻译
+    - RT 用户评分标志的小修复
+    - 重新启用 YouTube 视频用于测试
 0.3.8
-    - fixed scrolling back when you are in last option in settings
-    - some tweaks to 4k rips source flags
+    - 修复在设置中处于最后选项时向后滚动的问题
+    - 4K 资源标志的一些调整
 0.3.7
-    - fixed first setup wizard may not appear
+    - 修复首次设置向导可能不出现的问题
 0.3.6
-    - added setup wizard for initial setup skin after installation (may not appear for now...)
-    - updated some language strings
-    - added Polish language translation
-    - small overlay opacity tweaks
-    - added option to enable blur for background
-    - enabled local informations in info-dialog
+    - 添加安装后初始设置皮肤的设置向导（目前可能不出现...）
+    - 更新一些语言字符串
+    - 添加波兰语翻译
+    - 小的叠加层不透明度调整
+    - 添加启用背景模糊的选项
+    - 在信息对话框中启用本地信息
 0.3.5
-    - disabled update addon button
-    - some improvements for info-dialog list
-    - added settings for choosing focus frame border size
-    - added year to be displayed after movie title in widget on home screen
-    - tuned splash screen animations
+    - 禁用更新插件按钮
+    - 信息对话框列表的一些改进
+    - 添加选择聚焦框边框大小的设置
+    - 在主页小部件中电影标题后显示年份
+    - 调整启动画面动画
 0.3.4
-    - temporary disabled youtube videos from DialogVideoInfo
-    - added 3 and 5 seconds as an option in auto close osd
-    - removed skin helper from widgets
-    - code cleanup
-    - moved info from studio to bottom
-    - fixed some themoviedb helper errors
-    - added Coreelec specific playerprocessinfos
-    - added playerprocesinfo button to video OSD
-    - some optimalizations and tweaks for DialogVideoInfo
-    - changes to extendedinfo
-    - updated language strings
+    - 临时禁用 DialogVideoInfo 中的 YouTube 视频
+    - 添加 3 秒和 5 秒作为自动关闭 OSD 的选项
+    - 从小部件中移除 skin helper
+    - 代码清理
+    - 将工作室信息移到底部
+    - 修复一些 themoviedb helper 错误
+    - 添加 CoreELEC 特定的播放器进程信息
+    - 在视频 OSD 中添加播放器进程信息按钮
+    - DialogVideoInfo 的一些优化和调整
+    - 扩展信息的更改
+    - 更新语言字符串
 0.3.3
-    - removed embuary addons from dependency
-    - some optimization
-    - added button to manage trakt.tv list from DialogVideoInfo view
-    - added possibility to set favourites as a widget
-    - fix for trakt ratings
+    - 从依赖中移除 embuary 插件
+    - 一些优化
+    - 在 DialogVideoInfo 视图中添加管理 trakt.tv 列表的按钮
+    - 添加将收藏设置为小部件的可能性
+    - 修复 trakt 评分问题
 0.3.2
-    - fix for rottentomatoes usermeter
-    - Hungarian lang added (thanks to @frodo19)
-    - moved auto close osd after delay button to general options
-    - added auto close osd control after delay
+    - 修复烂番茄用户评分问题
+    - 添加匈牙利语（感谢 @frodo19）
+    - 将延迟后自动关闭 OSD 按钮移到常规选项
+    - 添加延迟后自动关闭 OSD 控件
 0.3.1
-    - removed references to unused addons
-    - added trakt.tv ratings
-    - removed theme switcher references
+    - 移除对未使用插件的引用
+    - 添加 trakt.tv 评分
+    - 移除主题切换器引用
 0.3.0
-    - rebranding from "heppen mod" to "arctic zephyr 2 resurrection"
-    - removed unused settings
-    - more fixes for ratings
-    - removed colorbox dependencies
-    - cleanups from code that did not works
-    - disabled extrafanart button
-    - switched from skinhelper to tmdbhelper
+    - 从"heppen mod"更名为"arctic zephyr 2 resurrection"
+    - 移除未使用的设置
+    - 更多评分修复
+    - 移除 colorbox 依赖
+    - 清理无效代码
+    - 禁用额外背景图按钮
+    - 从 skinhelper 切换到 tmdbhelper
 0.2.6
-    - moved epg button in video osd view
+    - 在视频 OSD 视图中移动 EPG 按钮
 0.2.5
-    - fixed ratings in DialogVideoInfo
-    - added "power menu" entry to main menu on initial setup
-    - reduced height of manage dialog window in DialogVideoInfo.xml
-    - fixed update button in addon info window
+    - 修复 DialogVideoInfo 中的评分
+    - 在初始设置时向主菜单添加"电源菜单"条目
+    - 减小 DialogVideoInfo.xml 中管理对话框窗口的高度
+    - 修复插件信息窗口中的更新按钮
 0.2.4
-    - rolled back ratings fixes to avoid performance regress
-    - updated images
+    - 回滚评分修复以避免性能回归
+    - 更新图片
 0.2.3
-    - added arial fonts
+    - 添加 Arial 字体
 0.2.2
-    - fixed ratings in DialogVideoInfo.xml view
-    - added channel numbers to DialogPVRChannelsOSD view
+    - 修复 DialogVideoInfo.xml 视图中的评分
+    - 在 DialogPVRChannelsOSD 视图中添加频道编号
 0.2.1
-    - another fix for artist slideshow in MusicVisualisation.xml view
-    - show current channels group in DialogPVRChannelsOSD view
+    - MusicVisualisation.xml 视图中艺术家幻灯片的另一个修复
+    - 在 DialogPVRChannelsOSD 视图中显示当前频道组
 0.2.0
-    - fix for artist slideshow in MusicVisualisation.xml view
+    - 修复 MusicVisualisation.xml 视图中的艺术家幻灯片
 0.1.9
-    - added small busy spinner for reloading widgets
+    - 添加用于重新加载小部件的小型忙碌指示器
 0.1.8
-    - small fixes
+    - 小修复
 0.1.7
-    - filled debugging settings with image and description
+    - 用图片和描述填充调试设置
 0.1.6
-    - some fixes for new section in settings page
+    - 设置页面中新部分的一些修复
 0.1.5
-    - moved debugging button to new section
-    - added new section to settings page
-    - added button to easy turning on/off debugging info
+    - 将调试按钮移到新部分
+    - 在设置页面添加新部分
+    - 添加轻松打开/关闭调试信息的按钮
 0.1.4
-    - little changes in LiveTV OSD
+    - 直播电视 OSD 的小改动
 0.1.3
-    - temporary fix for youtube videos from DialogVideoInfo
+    - DialogVideoInfo 中 YouTube 视频的临时修复
 0.1.2
-    - enabled minimal busy loader for Home view
+    - 为主页视图启用最小化忙碌加载器
 0.1.1
-    - small fix for Includes_DialogVideoInfo
+    - Includes_DialogVideoInfo 的小修复
 0.1.0
-    - changed branding
+    - 更改品牌标识
