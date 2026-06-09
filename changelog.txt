@@ -1,12 +1,12 @@
 1.1.8
-    - Update to skinshortcuts v3
-    - Rewrite shortcuts configuration files
-    - Add new menu and widgets configuration
+    - 升级到 skinshortcuts v3
+    - 重写快捷方式配置文件
+    - 添加新的菜单和小组件配置
 1.1.7
-    - Small changes
-    - Locate to currently playing episode
-    - Update Includes.xml
-    - Auto-focus current playing episode on load with absolute positioning
+    - 小改动
+    - 定位到当前播放的剧集
+    - 更新 Includes.xml
+    - 加载时自动聚焦当前播放的剧集（使用绝对定位）
 0.7.6
     - Create french translation (thanks @ludovik35)
     - Add EPG icon in PVR Guide Info (thanks @ludovik35)
