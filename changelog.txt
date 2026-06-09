@@ -1,3 +1,12 @@
+1.1.8
+    - Update to skinshortcuts v3
+    - Rewrite shortcuts configuration files
+    - Add new menu and widgets configuration
+1.1.7
+    - Small changes
+    - Locate to currently playing episode
+    - Update Includes.xml
+    - Auto-focus current playing episode on load with absolute positioning
 0.7.6
     - Create french translation (thanks @ludovik35)
     - Add EPG icon in PVR Guide Info (thanks @ludovik35)
