@@ -1916,10 +1916,7 @@ msgstr "在小组件中显示“更多...”文件夹"
 #: /1080i/SkinSettings.xml
 msgctxt "#31528"
 msgid "This is a light mod of Arctic Zephyr 2 by heppen. Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey and moded to work with Kodi 19 Matrix by pkscout. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations."
-msgstr ""
-"该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。\n"
-"原版由 jurialmunkey 创作，pkscout 适配 Matrix 及以上。\n"
-"该皮肤采用简约设计，旨在让用户能专注于自身的媒体内容。除默认的浅色配色方案外，这款皮肤还包含多款深色变体。"
+msgstr "该皮肤为 heppen 制作的 Arctic Zephyr 2 轻量修改版。Arctic Zephyr 2 是由 jurialmunkey 创建的极简皮肤，由 pkscout 修改以适用于 Kodi 19 Matrix。该皮肤设计简洁，让用户能够专注于他们的媒体内容。除了默认的浅色配色方案外，该皮肤还包含多种深色变体。"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31529"
