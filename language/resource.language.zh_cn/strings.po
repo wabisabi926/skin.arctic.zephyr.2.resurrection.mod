@@ -2340,3 +2340,13 @@ msgstr "方形展示 2"
 msgctxt "#31599"
 msgid "Reboot to android"
 msgstr "重启到安卓"
+
+#: /shortcuts/menus.xml
+msgctxt "#31600"
+msgid "Commands"
+msgstr "命令"
+
+#: /shortcuts/menus.xml
+msgctxt "#31601"
+msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
+msgstr "修改此快捷方式可能会阻止访问主菜单自定义器和多个皮肤选项。[CR]确定要对此快捷方式执行所请求的更改吗？"
