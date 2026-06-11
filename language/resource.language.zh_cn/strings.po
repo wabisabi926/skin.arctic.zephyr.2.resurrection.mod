@@ -2347,16 +2347,3 @@ msgstr "命令"
 msgctxt "#31601"
 msgid "Altering this shortcut may prevent access to the Main Menu customiser and several skin options.[CR]Are you sure you want to perform the requested changes to this shortcut?"
 msgstr "修改此快捷方式可能会阻止访问主菜单自定义器和多个皮肤选项。[CR]确定要对此快捷方式执行所请求的更改吗？"
-
-# System string overrides for search lists
-msgctxt "#345"
-msgid "Year"
-msgstr "年份"
-
-msgctxt "#515"
-msgid "Genres"
-msgstr "类型"
-
-msgctxt "#20360"
-msgid "Episodes"
-msgstr "剧集"
