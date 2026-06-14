@@ -1,3 +1,13 @@
+1.1.9
+    - 合并 DenDyGH/main 分支最新更改
+    - 修复 skinshortcuts 相关问题
+    - 新增视图类型翻译（英文、西班牙语、法语、匈牙利语、意大利语、波兰语、中文）
+    - 更新 shortcuts 配置文件
+    - 新增 skinviewtypes.json 视图类型配置
+    - 新增 skinvariables-closeosd.json 快捷键配置
+    - 更新 widgets.xml 小组件配置
+    - 更新 templates.xml 模板配置
+    - 更新多语言翻译
 1.1.8
     - 升级到 skinshortcuts v3
     - 重写快捷方式配置文件
