@@ -298,7 +298,7 @@
                 <control type="label">
                     <left>210</left>
                     <top>170</top>
-                    <label>$INFO[Player.Process(video.source.hdr.type)] $INFO[Player.Process(video.dovi.dual.track),- [COLOR dialog_fg_70](,)[/COLOR]]</label>
+                    <label>$INFO[Player.Process(video.source.hdr.type)]$VAR[DVDualTrackVar]</label>
                     <font>font_tiny1</font>
                     <textcolor>dialog_fg_90</textcolor>
                 </control>
@@ -1201,6 +1201,7 @@
                     <label>$INFO[Player.Process(video.dovi.l5.left.offset)] l $INFO[Player.Process(video.dovi.l5.right.offset)] l $INFO[Player.Process(video.dovi.l5.top.offset)] l $INFO[Player.Process(video.dovi.l5.bottom.offset)]</label>
                     <font>font_tiny1</font>
                     <textcolor>dialog_fg_90</textcolor>
+                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
                 </control>
                 <!-- Arrows: Left to right with line icon -->
                 <control type="label">
@@ -1209,6 +1210,7 @@
                     <label></label>
                     <font>font_tiny_iconic</font>
                     <textcolor>dialog_fg_90</textcolor>
+                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
                 </control>
                 <!-- Arrows: Top to bottom with line icon -->
                 <control type="label">
@@ -1218,6 +1220,7 @@
                     <label></label>
                     <font>font_tiny_iconic</font>
                     <textcolor>dialog_fg_90</textcolor>
+                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
                 </control>
             </control>
         </control>
