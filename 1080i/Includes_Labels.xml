@@ -162,6 +162,15 @@
         <value>$INFO[VideoPlayer.AudioChannels,,.0]</value>
     </variable>
 
+    <variable name="Label_RipSource">
+        <value condition="$EXP[Exp_RipSource_BluRay]">Blu-ray</value>
+        <value condition="$EXP[Exp_RipSource_HDDVD]">HD DVD</value>
+        <value condition="$EXP[Exp_RipSource_DVD]">DVD</value>
+        <value condition="$EXP[Exp_RipSource_HDTV]">HDTV</value>
+        <value condition="$EXP[Exp_RipSource_SDTV]">SDTV</value>
+        <value condition="$EXP[Exp_RipSource_WebDL]">WEB-DL</value>
+    </variable>
+
     <variable name="Label_AudioCodec">
         <value condition="String.IsEqual(ListItem.AudioCodec,aac) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,aac)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,aac)]">AAC</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,aac_latm) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,aac_latm)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,aac_latm)]">AAC</value>
@@ -182,6 +191,7 @@
         <value condition="[String.IsEqual(ListItem.AudioCodec,dtsma) + [String.Contains(ListItem.FileNameAndPath,DTSX) | String.Contains(ListItem.FileNameAndPath,DTS-X)]] | [Window.IsActive(fullscreenvideo) + [String.IsEqual(VideoPlayer.AudioCodec,dtsma) + [String.Contains(Player.FileNameAndPath,DTSX) | String.Contains(Player.FileNameAndPath,DTS-X)]]]">DTS-X</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,dtsma) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,dtsma)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,dtsma)]">DTS-HD MA</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,eac3_ddp_atmos) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,eac3_ddp_atmos)]">Dolby Digital+ Atmos</value>
+        <value condition="String.IsEqual(ListItem.AudioCodec,eac3) + $EXP[Exp_ListItem_Atmos]">Dolby Digital+ Atmos</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,eac3) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,eac3)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,eac3)]">Dolby Digital+</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,flac) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,flac)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,flac)]">FLAC</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,mp1) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,mp1)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,mp1)]">MP1</value>
@@ -195,7 +205,7 @@
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s16le) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,pcm_s16le)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,pcm_s16le)]">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,pcm_s24le) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,pcm_s24le)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,pcm_s24le)]">PCM</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,truehd_atmos) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,truehd_atmos)]">TrueHD Atmos</value>
-        <value condition="[String.IsEqual(ListItem.AudioCodec,truehd) + String.Contains(ListItem.FileNameAndPath,atmos)] | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.FileNameAndPath,atmos)]">TrueHD Atmos</value>
+        <value condition="[String.IsEqual(ListItem.AudioCodec,truehd) + $EXP[Exp_ListItem_Atmos]] | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,truehd) + String.Contains(Player.FileNameAndPath,atmos)]">TrueHD Atmos</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,truehd) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,truehd)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,truehd)]">Dolby TrueHD</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,vorbis) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,vorbis)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,vorbis)]">Vorbis</value>
         <value condition="String.IsEqual(ListItem.AudioCodec,wav) | [Window.IsActive(fullscreenvideo) + String.IsEqual(VideoPlayer.AudioCodec,wav)] | [Window.IsActive(visualisation) + String.IsEqual(MusicPlayer.Codec,wav)]">WAV</value>
