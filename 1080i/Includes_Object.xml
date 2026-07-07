@@ -508,7 +508,7 @@
                 <bottom>0</bottom>
                 <itemgap>20</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
-                <visible>[!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.AudioCodec)] | !String.IsEmpty(ListItem.VideoResolution)</visible>
+                <visible>[!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.AudioCodec)] | !String.IsEmpty(ListItem.VideoResolution) | $EXP[Exp_RipSource]</visible>
                 <control type="image">
                     <texture background="true" colordiffuse="main_fg_100">flags/$INFO[Skin.String(Icons)]/other/3D.png</texture>
                     <aspectratio align="left">keep</aspectratio>
@@ -593,7 +593,7 @@
                     <height>24</height>
                     <width>24</width>
                     <texture background="true" colordiffuse="main_fg_100">flags/video.png</texture>
-                    <visible>Skin.HasSetting(TextCodecs) + !String.IsEmpty(ListItem.VideoCodec)</visible>
+                    <visible>Skin.HasSetting(TextCodecs) + [!String.IsEmpty(ListItem.VideoCodec) | $EXP[Exp_RipSource]]</visible>
                 </control>
                 <control type="label">
                     <centertop>50%</centertop>
@@ -602,7 +602,7 @@
                     <width>auto</width>
                     <font>font_mini</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label max="350">$VAR[Label_ListItem_VideoCodec, ,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
+                    <label max="350">$VAR[Label_RipSource,,  •  ]$VAR[Label_ListItem_VideoCodec,,  •  ]$INFO[ListItem.VideoResolution]$INFO[ListItem.VideoAspect,  •  ,]$VAR[Label_HDRType,  •  ,]</label>
                     <height>32</height>
                     <visible>Skin.HasSetting(TextCodecs)</visible>
                 </control>
