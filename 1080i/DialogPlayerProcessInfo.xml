@@ -1184,14 +1184,14 @@
                     <label>$LOCALIZE[31967]:</label>
                     <font>font_tiny1</font>
                     <textcolor>dialog_fg_90</textcolor>
-                    <visible>String.IsEqual(Player.Process(video.dovi.l5.detected),5)</visible>
+                    <visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
                 </control>
                 <control type="label">
                     <top>201</top>
                     <label>$VAR[L5StateVar]:</label>
                     <font>font_tiny1</font>
                     <textcolor>dialog_fg_90</textcolor>
-                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detected))</visible>
+                    <visible>false</visible>
                 </control>
                 <control type="label">
                     <left>170</left>
@@ -1201,7 +1201,7 @@
                     <label>$INFO[Player.Process(video.dovi.l5.left.offset)] l $INFO[Player.Process(video.dovi.l5.right.offset)] l $INFO[Player.Process(video.dovi.l5.top.offset)] l $INFO[Player.Process(video.dovi.l5.bottom.offset)]</label>
                     <font>font_tiny1</font>
                     <textcolor>dialog_fg_90</textcolor>
-                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
+                    <visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
                 </control>
                 <!-- Arrows: Left to right with line icon -->
                 <control type="label">
@@ -1210,7 +1210,7 @@
                     <label></label>
                     <font>font_tiny_iconic</font>
                     <textcolor>dialog_fg_90</textcolor>
-                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
+                    <visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
                 </control>
                 <!-- Arrows: Top to bottom with line icon -->
                 <control type="label">
@@ -1220,7 +1220,7 @@
                     <label></label>
                     <font>font_tiny_iconic</font>
                     <textcolor>dialog_fg_90</textcolor>
-                    <visible>!String.IsEmpty(Player.Process(video.dovi.l5.detect.state))</visible>
+                    <visible>String.IsEqual(Player.Process(video.dovi.has.l5),1)</visible>
                 </control>
             </control>
         </control>
