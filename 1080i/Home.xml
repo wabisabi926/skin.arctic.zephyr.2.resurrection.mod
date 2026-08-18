@@ -29,23 +29,6 @@
             <onback>301</onback>
             <onclick>ActivateWindow(Weather)</onclick>
         </control>
-        <control type="list" id="9989">
-            <description>hidden container for widget count</description>
-            <posx>-20</posx>
-            <posy>-20</posy>
-            <width>1</width>
-            <height>1</height>
-            <visible>true</visible>
-            <onup>50</onup>
-            <ondown>50</ondown>
-            <onleft>50</onleft>
-            <onright>50</onright>
-            <itemlayout width="1" height="1">
-            </itemlayout>
-            <focusedlayout height="1" width="1">
-            </focusedlayout>
-            <content><include>skinshortcuts-template-widgets-submenu</include></content>
-        </control>
         <control type="list" id="9988">
             <description>hidden container for playlist background</description>
             <posx>-20</posx>

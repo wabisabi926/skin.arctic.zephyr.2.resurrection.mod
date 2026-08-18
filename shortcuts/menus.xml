@@ -684,6 +684,13 @@
                 <shortcut name="picture-files" label="$LOCALIZE[744]" icon="DefaultFile.png">
                     <action>ActivateWindow(Pictures,return)</action>
                 </shortcut>
+                <content source="sources" target="pictures"/>
+            </group>
+            <group name="file-sources" label="$LOCALIZE[744]" icon="DefaultFile.png">
+                <content source="sources" target="files"/>
+            </group>
+            <group name="program-sources" label="$LOCALIZE[0]" icon="DefaultAddonProgram.png">
+                <content source="sources" target="programs"/>
             </group>
         </group>
         <!-- Add-ons -->
