@@ -271,8 +271,8 @@
             <label>$LOCALIZE[1037]</label>
             <icon>DefaultFolder.png</icon>
             <property name="widgetPath">addons://sources/video/</property>
-            <property name="widgetType">programs</property>
-            <property name="widgetTarget">programs</property>
+            <property name="widgetType">videos</property>
+            <property name="widgetTarget">videos</property>
             <property name="widgetAspect">SmallSquare</property>
             <property name="widgetSource">addon</property>
         </item>
