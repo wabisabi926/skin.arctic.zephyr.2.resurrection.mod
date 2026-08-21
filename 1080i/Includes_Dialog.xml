@@ -337,7 +337,7 @@
                 </control>
                 <control type="group">
                     <control type="image">
-                        <texture colordiffuse="$VAR[$PARAM[color-var]]" border="20">common/box.png</texture>
+                        <texture colordiffuse="$PARAM[color-var]" border="20">common/box.png</texture>
                         <visible>!Control.HasFocus(3110) | !String.IsEqual(Window(Home).Property(colorpick),$PARAM[color])</visible>
                     </control>
                     <control type="image">
