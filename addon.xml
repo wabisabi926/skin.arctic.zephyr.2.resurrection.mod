@@ -51,6 +51,8 @@
             <screenshot>resources/screenshot-06.jpg</screenshot>
         </assets>
         <news>
+            [I][COLOR FFFF9800]v66.1.0.52[/COLOR][/I][CR]- Updated to upstream 1.0.52
+
             [I][COLOR FFFF9800]v66.1.0.51[/COLOR][/I][CR]- Improved DTS:X media flag and label detection
 
             [I][COLOR FFFF9800]v65.1.0.51[/COLOR][/I][CR]- Fixed Dolby Vision L5 active-area offsets in Player Process Info
