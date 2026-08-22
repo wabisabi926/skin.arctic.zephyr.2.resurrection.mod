@@ -178,10 +178,10 @@
 
     <variable name="Global_Background_Image_Var">
         <!-- Settings Widget -->
-        <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [String.IsEqual(Container(9989).ListItem.Property(list),Settings) | String.IsEqual(Container(301).ListItem.Property(widget),Settings)]">$VAR[Global_Background_Image_NoFanart]</value>
+        <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [String.IsEqual(Container(301).ListItem.Property(submenuPath),Settings) | String.IsEqual(Container(301).ListItem.Property(widget),Settings)]">$VAR[Global_Background_Image_NoFanart]</value>
 
         <!-- Weather -->
-        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(9999) | String.IsEqual(Container(9989).ListItem.Property(list),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>
+        <value condition="[Window.IsVisible(weather) | [Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti) + String.IsEqual(Container(301).ListItem.Property(widget),Weather)] | [Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(9999) | String.IsEqual(Container(301).ListItem.Property(submenuPath),Weather)]]] + System.HasAddon(resource.images.weatherfanart.multi)">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weatherfanart.multi/,/]</value>
 
         <!-- Fanart -->
         <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>

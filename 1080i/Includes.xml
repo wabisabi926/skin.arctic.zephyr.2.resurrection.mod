@@ -73,14 +73,6 @@
         <value condition="String.IsEqual(Skin.String(PosterHighlight),Highlight)">$VAR[ColorHighlight]</value>
     </variable>
 
-    <!-- Overlay Color -->
-    <variable name="ColorOverlay">
-        <value condition="Skin.HasSetting(DisableOverlay)">7f000000</value>
-        <value condition="Skin.HasSetting(TMDbHelper.EnableColors) + !String.IsEmpty(Window(home).Property(TMDbHelper.ListItem.Colors.Main))">$INFO[Window(home).Property(TMDbHelper.ListItem.Colors.Main)]</value>
-        <value condition="!String.IsEmpty(Skin.String(overlaycolor.name))">$INFO[Skin.String(overlaycolor.name)]</value>
-        <value>Highlight</value>
-    </variable>
-
     <variable name="ColorHighlightOverlay">
         <value condition="String.IsEqual(Skin.String(PosterHighlight),White) | String.IsEmpty(Skin.String(PosterHighlight))">ffffffff</value>
         <value condition="String.IsEqual(Skin.String(PosterHighlight),Mix) | String.IsEqual(Skin.String(PosterHighlight),Highlight)">$VAR[ColorHighlight]</value>

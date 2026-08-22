@@ -29,23 +29,6 @@
             <onback>301</onback>
             <onclick>ActivateWindow(Weather)</onclick>
         </control>
-        <control type="list" id="9989">
-            <description>hidden container for widget count</description>
-            <posx>-20</posx>
-            <posy>-20</posy>
-            <width>1</width>
-            <height>1</height>
-            <visible>true</visible>
-            <onup>50</onup>
-            <ondown>50</ondown>
-            <onleft>50</onleft>
-            <onright>50</onright>
-            <itemlayout width="1" height="1">
-            </itemlayout>
-            <focusedlayout height="1" width="1">
-            </focusedlayout>
-            <content><include>skinshortcuts-template-widgets-submenu</include></content>
-        </control>
         <control type="list" id="9988">
             <description>hidden container for playlist background</description>
             <posx>-20</posx>
@@ -86,7 +69,7 @@
                 <include>Dimensions_Fullscreen</include>
                 <texture colordiffuse="ff4d4d4d">$VAR[Image_Startup]</texture>
                 <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
-                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
+                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <animation effect="fade" start="100" end="0" delay="1000" time="1000" tween="cubic">Hidden</animation>
             </control>
             <control type="label">
@@ -97,7 +80,7 @@
                 <label>Arctic [COLOR=$VAR[ColorHighlight]]Zephyr[/COLOR][COLOR=main_fg_30] 2[/COLOR]</label>
                 <font>font_splash</font>
                 <textcolor>main_fg_100</textcolor>
-                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
+                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <animation effect="slide" start="0" end="-1600" delay="0" time="1000" tween="cubic">Hidden</animation>
                 <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
             </control>
@@ -110,14 +93,14 @@
                 <label>[COLOR=$VAR[ColorHighlight]]Resurrection[/COLOR]</label>
                 <font>font_splash</font>
                 <textcolor>main_fg_100</textcolor>
-                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
+                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <animation effect="slide" start="0" end="1600" delay="0" time="1000" tween="cubic">Hidden</animation>
                 <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
             </control>
             <control type="group">
                 <top>800</top>
                 <visible>String.IsEmpty(Skin.String(StartupPlaylist))</visible>
-                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1151)</visible>
+                <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <animation effect="fade" start="100" end="0" time="1000" tween="cubic">Hidden</animation>
                 <include content="Defs_BusySpinner">
                     <param name="label" value="$LOCALIZE[31349]..." />
