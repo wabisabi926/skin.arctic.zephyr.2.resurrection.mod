@@ -11,8 +11,8 @@
     <onload condition="String.IsEmpty(Window.Property(ReloadDone))">Skin.Reset(TMDbHelper.MonitorContainer)</onload>
 
     <!-- Skin Init -->
-    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff283ba8)</onload>
-    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff3949ab)</onload>
+    <onload condition="String.IsEmpty(Skin.String(focuscolor.name))">Skin.SetString(focuscolor.name,ff0288d1)</onload>
+    <onload condition="String.IsEmpty(Skin.String(gradientcolor.name))">Skin.SetString(gradientcolor.name,ff0288d1)</onload>
     <onload condition="String.IsEmpty(Skin.String(CustomRating.Movies.Item01))">Skin.SetString(CustomRating.Movies.Item01,Kodi)</onload>
     <onload condition="String.IsEmpty(Skin.String(CustomRating.Movies.Item02))">Skin.SetString(CustomRating.Movies.Item02,TMDb)</onload>
     <onload condition="String.IsEmpty(Skin.String(CustomRating.TVShows.Item01))">Skin.SetString(CustomRating.TVShows.Item01,Kodi)</onload>

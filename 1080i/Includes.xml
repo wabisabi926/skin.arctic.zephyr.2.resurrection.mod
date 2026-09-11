@@ -45,13 +45,13 @@
 
     <!-- Highlight Color -->
     <variable name="ColorHighlight">
-        <value condition="String.IsEmpty(Skin.String(focuscolor.name))">ff283ba8</value>
+        <value condition="String.IsEmpty(Skin.String(focuscolor.name))">ff0288d1</value>
         <value>$INFO[Skin.String(focuscolor.name)]</value>
     </variable>
 
     <!-- Gradient Color -->
     <variable name="ColorGradient">
-        <value condition="String.IsEmpty(Skin.String(gradientcolor.name))">ff3949ab</value>
+        <value condition="String.IsEmpty(Skin.String(gradientcolor.name))">ff0288d1</value>
         <value>$INFO[Skin.String(gradientcolor.name)]</value>
     </variable>
 
