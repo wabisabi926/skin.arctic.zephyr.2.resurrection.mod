@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1146">
-    <defaultcontrol always="true">6206</defaultcontrol>
-    <onload>CancelAlarm(osd_timeout,true)</onload>
-    <include>Animation_FadeIn_SlideUp</include>
+    <defaultcontrol always="true">10018</defaultcontrol>
     <controls>
-        <control type="button" id="99220">
-            <include>Defs_Hidden_Button</include>
-            <onfocus>SetFocus(6206)</onfocus>
-            <onfocus condition="Window.IsVisible(1146)">Action(Close)</onfocus>
-        </control>
-        
-        <control type="button">
-            <description>background close area</description>
-            <left>0</left>
-            <top>0</top>
-            <width>100%</width>
-            <bottom>200</bottom>
-            <texturefocus />
-            <texturenofocus />
-            <onclick>Action(close)</onclick>
-        </control>
-        
         <control type="group">
-            <right>5</right>
-            <width>955</width>
-            <bottom>5</bottom>
-            <height>635</height>
-            
-            <!-- Audio Streams List -->
-            <include content="OSD_Stream_Selector">
-                <param name="id" value="6206" />
-                <param name="buttonid" value="10018" />
-                <param name="stream_type" value="audio" />
-                <param name="header" value="$LOCALIZE[292]" />
-                <param name="nibpos" value="300" />
-                <param name="width" value="955" />
-                <param name="method" value="set_player_audiostream" />
-                <param name="icon" value="special://skin/extras/icons/volume.png" />
-            </include>
+            <left>30</left>
+            <right>30</right>
+
+            <visible>!Window.IsActive(DialogPlayerProcessInfo.xml)</visible>
+            <visible>!Window.IsVisible(DialogSlider.xml)</visible>
+
+            <control type="group">
+                <include content="OSD_Stream_Selector">
+                    <param name="id">6206</param>
+                    <param name="buttonid">10018</param>
+                    <param name="stream_type">audio</param>
+                    <param name="header">$LOCALIZE[292]</param>
+                    <param name="nibpos">300</param>
+                    <param name="method">set_player_audiostream</param>
+                    <param name="icon">special://skin/extras/icons/volume.png</param>
+                </include>
+            </control>
+
+            <control type="grouplist">
+                <height>120</height>
+                <centerbottom>80</centerbottom>
+                <orientation>horizontal</orientation>
+                <itemgap>32</itemgap>
+                <align>center</align>
+
+                <onup>CancelAlarm(osd_timeout,true)</onup>
+                <onup>SetFocus(6206)</onup>
+
+                <control type="button" id="18">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus>SetFocus(18)</onfocus>
+                </control>
+
+                <control type="button" id="10018">
+                    <include>Defs_Hidden_Button</include>
+                    <onclick>ActivateWindow(osdaudiosettings)</onclick>
+                </control>
+
+                <control type="button" id="41">
+                    <include>Defs_Hidden_Button</include>
+                    <onfocus>Close</onfocus>
+                    <onfocus>SetFocus(41)</onfocus>
+                </control>
+            </control>
         </control>
     </controls>
 </window>
