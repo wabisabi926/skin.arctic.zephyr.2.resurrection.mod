@@ -135,6 +135,9 @@ def check(root: Path, addon_id: str, version: str, files: list[Path]) -> list[st
                 bad_xml.append(f"{rel.as_posix()}: {exc}")
     if bad_xml:
         warnings.append("XML 解析失败:\n    " + "\n    ".join(bad_xml))
+    # 当前版本必须有对应的更新日志段落（fuse3 规范：缺日志不发版）
+    if not extract_changelog(root, version):
+        warnings.append(f"CHANGELOG.md 缺少版本 {version} 的段落或段落为空")
     # 顶层目录名不能与插件 id 冲突
     if addon_id in {p.parts[0] for p in files if len(p.parts) > 1}:
         warnings.append(f"发现与插件 id 同名的子目录 {addon_id}/，可能导致包结构异常")
@@ -199,11 +202,45 @@ def detect_kodi_dir(addon_id: str) -> Path | None:
     return None
 
 
+def extract_changelog(root: Path, version: str) -> str:
+    """从 CHANGELOG.md 抽取指定版本的段落（fuse3 格式：## <版本> (日期)）。
+
+    找不到版本、或段落为空时返回空字符串，由调用方判定为失败。
+    """
+    changelog = root / "CHANGELOG.md"
+    if not changelog.is_file():
+        return ""
+    text = changelog.read_text(encoding="utf-8")
+    lines = text.splitlines()
+    heading_re = re.compile(r"^##\s+(\S+)(?:\s|$|\()")
+    start = None
+    for i, line in enumerate(lines):
+        m = heading_re.match(line)
+        if m and m.group(1) == version:
+            start = i + 1
+            break
+    if start is None:
+        return ""
+    body: list[str] = []
+    for line in lines[start:]:
+        if line.startswith("## "):
+            break
+        body.append(line)
+    # 去掉首尾空行
+    while body and not body[0].strip():
+        body.pop(0)
+    while body and not body[-1].strip():
+        body.pop()
+    return "\n".join(body)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Kodi 皮肤打包脚本")
     parser.add_argument("--out", type=Path, help="zip 输出目录（默认 dist/）")
     parser.add_argument("--check", action="store_true", help="只检查不打包")
     parser.add_argument("--print-version", action="store_true", help="只打印版本号")
+    parser.add_argument("--changelog", metavar="VERSION",
+                        help="从 CHANGELOG.md 抽取指定版本的更新日志段落")
     parser.add_argument("--sync-kodi", action="store_true", help="打包后同步到本机 Kodi")
     parser.add_argument("--kodi-dir", type=Path, help="Kodi 插件目录（配合 --sync-kodi）")
     args = parser.parse_args()
@@ -214,6 +251,17 @@ def main() -> int:
 
         if args.print_version:
             print(version)
+            return 0
+
+        if args.changelog is not None:
+            section = extract_changelog(root, args.changelog)
+            if not section:
+                print(
+                    f"[错误] CHANGELOG.md 中找不到版本 {args.changelog} 的段落或段落为空",
+                    file=sys.stderr,
+                )
+                return 1
+            print(section)
             return 0
 
         print(f"插件 id : {addon_id}")
@@ -228,9 +276,12 @@ def main() -> int:
             print("\n[警告] 发现以下问题：", file=sys.stderr)
             for w in warnings:
                 print(f"  - {w}", file=sys.stderr)
-            # XML 解析失败属于致命问题，拒绝打包
-            if any("XML 解析失败" in w for w in warnings):
-                print("\n[错误] XML 解析失败，已中止打包。", file=sys.stderr)
+            # 致命问题：XML 解析失败或缺更新日志，拒绝打包/发布
+            fatal = [w for w in warnings if "XML 解析失败" in w or "CHANGELOG.md 缺少版本" in w]
+            if fatal:
+                print("\n[错误] 存在致命问题，已中止：", file=sys.stderr)
+                for w in fatal:
+                    print(f"  - {w}", file=sys.stderr)
                 return 1
 
         if args.check:

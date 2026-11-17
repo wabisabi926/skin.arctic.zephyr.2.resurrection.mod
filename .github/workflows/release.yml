@@ -61,25 +61,30 @@ jobs:
       - name: Build zip
         run: python tools/build.py --out dist
 
-      - name: Generate release notes
+      - name: Extract changelog for this version
         id: notes
+        env:
+          VERSION: ${{ steps.ver.outputs.version }}
         run: |
           set -euo pipefail
+          # build.py --changelog 输出该版本段落，找不到或为空则失败，避免发出无日志的版本。
+          CHANGELOG=$(python tools/build.py --changelog "$VERSION") || {
+            echo "::error::CHANGELOG.md 中找不到版本 $VERSION 的段落，或段落为空"
+            exit 1
+          }
+          if [ -z "$CHANGELOG" ]; then
+            echo "::error::CHANGELOG.md 中版本 $VERSION 的段落为空"
+            exit 1
+          fi
           {
             echo "notes<<EOF"
-            echo "Kodi skin \`skin.arctic.zephyr.2.resurrection.mod\` 版本 ${{ steps.ver.outputs.version }}"
+            echo "Kodi skin \`skin.arctic.zephyr.2.resurrection.mod\` 版本 $VERSION"
             echo ""
             echo "### 安装方法"
             echo "下载下方 zip → Kodi → 插件 → 从 zip 文件安装"
             echo ""
             echo "### 更新日志"
-            if [ -f CHANGELOG_zh.md ]; then
-              sed -n '1,40p' CHANGELOG_zh.md
-            elif [ -f changelog.txt ]; then
-              sed -n '1,40p' changelog.txt
-            else
-              echo "（本次未附更新日志）"
-            fi
+            echo "$CHANGELOG"
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
