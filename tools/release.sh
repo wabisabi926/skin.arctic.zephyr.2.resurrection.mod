@@ -27,7 +27,15 @@ cd "$REPO_ROOT"
 
 PYTHON_BIN="${PYTHON_BIN:-python}"
 REMOTE="${REMOTE:-origin}"
-BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+LOCAL_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+# 本地分支名可能与远程不同（如本地 Piers-douban → 远程 douban-Piers），
+# 用 upstream 的远程分支名作为推送目标，避免误建同名新分支。
+UPSTREAM="$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2>/dev/null || true)"
+if [ -n "$UPSTREAM" ] && [[ "$UPSTREAM" == "$REMOTE/"* ]]; then
+    REMOTE_BRANCH="${UPSTREAM#"$REMOTE/"}"
+else
+    REMOTE_BRANCH="$LOCAL_BRANCH"
+fi
 
 NO_PUSH=0
 WAIT_RELEASE=0
@@ -65,7 +73,7 @@ VERSION="$($PYTHON_BIN tools/build.py --print-version)"
 [ -n "$VERSION" ] || die "无法读取版本号"
 TAG="v$VERSION"
 
-echo "分支    : $BRANCH"
+echo "分支    : $LOCAL_BRANCH -> $REMOTE/$REMOTE_BRANCH"
 echo "版本    : $VERSION"
 echo "Tag     : $TAG"
 echo "远程    : $REMOTE"
@@ -81,7 +89,7 @@ $PYTHON_BIN tools/build.py --check || die "发布前检查失败"
 if [ "$DRY_RUN" -eq 1 ]; then
     say "演练模式：以下是将要执行的操作"
     echo "  1. git tag -a $TAG -m 'Release $TAG'"
-    [ "$NO_PUSH" -eq 0 ] && echo "  2. git push $REMOTE $BRANCH && git push $REMOTE $TAG"
+    [ "$NO_PUSH" -eq 0 ] && echo "  2. git push $REMOTE HEAD:$REMOTE_BRANCH && git push $REMOTE $TAG"
     echo "  3. 云端 Actions 打包并创建 Release（下载 zip 作为安装资产）"
     echo "演练结束，未做任何改动。"
     exit 0
@@ -106,8 +114,9 @@ if [ "$NO_PUSH" -eq 0 ]; then
         done
         return 1
     }
-    push_with_retry "$BRANCH" || die "推送分支失败"
-    push_with_retry "$TAG"    || die "推送 tag 失败"
+    # 用 HEAD:远程分支 的写法，兼容本地/远程分支名不一致的情况
+    push_with_retry "HEAD:$REMOTE_BRANCH" || die "推送分支失败"
+    push_with_retry "$TAG"                || die "推送 tag 失败"
 
     say "已推送，等待 GitHub Actions 云端打包并发布 Release"
     echo "进度可在浏览器查看："
