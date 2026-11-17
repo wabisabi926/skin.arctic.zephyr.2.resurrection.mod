@@ -1,0 +1,94 @@
+name: Build & Release Skin
+
+# 触发方式：
+#   1) push 一个以 v 开头的 tag，例如 v1.1.15 —— 自动打包并发布 Release
+#   2) 在 Actions 页面手动触发（可指定 tag，用于补发）
+#
+# 版本号来自 addon.xml，tag 名下面的版本必须与之一致（v + 版本号），
+# 否则会中止，避免发出版本对不上的包。
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '要发布的 tag（如 v1.1.15），留空则用当前 ref'
+        required: false
+        type: string
+
+permissions:
+  contents: write   # 创建 Release / 上传资产需要写权限
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Read version from addon.xml
+        id: ver
+        run: |
+          set -euo pipefail
+          VERSION=$(python tools/build.py --print-version)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "检测到版本: $VERSION"
+
+      - name: Verify tag matches addon.xml version
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          EXPECTED="v${{ steps.ver.outputs.version }}"
+          if [ "$TAG" != "$EXPECTED" ]; then
+            echo "::error::tag $TAG 与 addon.xml 版本不匹配（应为 $EXPECTED）"
+            exit 1
+          fi
+          echo "tag 校验通过: $TAG"
+
+      - name: Pre-flight check
+        run: python tools/build.py --check
+
+      - name: Build zip
+        run: python tools/build.py --out dist
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          set -euo pipefail
+          {
+            echo "notes<<EOF"
+            echo "Kodi skin \`skin.arctic.zephyr.2.resurrection.mod\` 版本 ${{ steps.ver.outputs.version }}"
+            echo ""
+            echo "### 安装方法"
+            echo "下载下方 zip → Kodi → 插件 → 从 zip 文件安装"
+            echo ""
+            echo "### 更新日志"
+            if [ -f CHANGELOG_zh.md ]; then
+              sed -n '1,40p' CHANGELOG_zh.md
+            elif [ -f changelog.txt ]; then
+              sed -n '1,40p' changelog.txt
+            else
+              echo "（本次未附更新日志）"
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create Release and upload zip
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: v${{ steps.ver.outputs.version }}
+          body: ${{ steps.notes.outputs.notes }}
+          files: dist/*.zip
+          fail_on_unmatched_files: true
+          generate_release_notes: true

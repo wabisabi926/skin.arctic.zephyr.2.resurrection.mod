@@ -1,2 +1,10 @@
 .DS_Store
 .idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# 本地工作数据与构建产物，不应进入仓库/发布包
+.workbuddy-ai/
+dist/
+releases/
